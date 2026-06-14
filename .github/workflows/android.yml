@@ -35,9 +35,9 @@ jobs:
       - name: Sync Capacitor to Android
         working-directory: frontend
         run: |
-          npx cap init "Kavitha Medicals" "com.prabhu.kavithamedicals" --web-dir=dist
-          npx cap add android
-          npx cap sync android
+          npx capacitor init "Kavitha Medicals" "com.prabhu.kavithamedicals" --web-dir=dist
+          npx capacitor add android || true
+          npx capacitor sync android
 
       - name: Build Android APK (Debug)
         working-directory: frontend/android
